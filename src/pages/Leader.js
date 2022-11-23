@@ -1,35 +1,90 @@
-import Student from '../components/Student';
 import back from '../resources/crown.png'
+import sback from '../resources/second.png'
+import tback from '../resources/third.png'
 
-function Leader(){
+function Leader() {
 
-    const leader = [[1,1100,'Somesh'],[2,1000,'Rajesh'],[2,1000,'Rajesh'],[2,1000,'Rajesh'],[2,1000,'Rajesh'],[2,1000,'Rajesh'],[2,1000,'Rajesh'],[2,1000,'Rajesh'],[2,1000,'Rajesh'],[2,1000,'Rajesh']]
+    const leader = [[1, 1100, 'Somesh'], [2, 1000, 'Rajesh'], [2, 1000, 'Rajesh'], [2, 1000, 'Rajesh'], [2, 1000, 'Rajesh'], [2, 1000, 'Rajesh'], [2, 1000, 'Rajesh'], [2, 1000, 'Rajesh'], [2, 1000, 'Rajesh'], [2, 1000, 'Rajesh']]
 
-    return <div className="p-8 flex justify-center items-center w-screen h-full min-h-screen bg-gradient-to-t from-violet-800 to-violet-400">
-
-                <div className=' w-[1000px] h-[600px] rounded-xl bg-white outline bg-[#7f0457] outline-2 outline-blue-800 flex justify-between'>
-                    <div className='w-[100px] ml-28'>
-                        <img src={back} className='m-28 mb-0'/>
-                        <div className='rounded-t-xl justify-around flex border items-end  border-4 w-[300px] h-[400px]'>
-                            <div className='bg-blue-300 border h-[200px] w-[60px] m-2 mb-0'>
-                                01
+    return <div className='h-screen w-screen relative z-10'>
+        <div className='bg-[#d9e3e9] flex items-center justify-center relative h-screen w-screen'>
+            <div className='bg-[#64d8d8] w-1/3 absolute z-30 -top-32 -left-24 h-2/3 rounded-full'></div>
+            <div className='shadow shadow-2xl w-5/6 h-5/6 bg-[#f5f9fa] relative z-50 outline outline-1 outline-gray-200 rounded-md'>
+                <nav className='outline outline-1 outline-gray-200 flex text-[30px] text-gray-500 justify-center p-3 rounded-t-md bg-white '>
+                    <ul className='ml-16'>Leader Board</ul>
+                </nav>
+                <div className='flex m-4 items-center justify-around text-gray-800 '>
+                    <div className='text-[15px] underline'>Back to Dashboard</div>
+                    <div className='text-[30px]'>Top Participents</div>
+                    <div className='text-[15px] underline'>End Test</div>
+                </div>
+                <div className='text-center text-gray-400'>Date: Nov 23</div>
+                <div>
+                    <div className='flex justify-around pt-4'>
+                        <div className='flex flex-col justify-center items-center outline outline-1 outline-gray-300 rounded-xl w-1/5 bg-white h-[200px]'>
+                            <div className='m-2'>
+                                <img src={back} />
                             </div>
-                            <div className='border bg-blue-300 h-[320px] w-[60px] m-2 mb-0'>
-                                02
+                            <div className='text-gray-500'>
+                                {leader[0][2]}
                             </div>
-                            <div className='border w-[60px] bg-blue-300 h-[160px] m-2 mb-0'>
-                                03
+                            <div className='rounded-full bg-[#f0f7f7] text-[15px] text-[#64d8d8] px-6 py-1 m-3 font-bold'>
+                                {leader[0][1]}
                             </div>
                         </div>
+                        <div className='flex flex-col justify-center items-center outline outline-1 outline-gray-300 rounded-xl w-1/5 bg-white h-[200px]'>
+                            <div className='m-2'>
+                                <img src={sback}  className='h-[60px]'/>
+                            </div>
+                            <div className='text-gray-500'>
+                                {leader[0][2]}
+                            </div>
+                            <div className='rounded-full bg-[#f0f7f7] text-[15px] text-[#64d8d8] px-6 py-1 m-3 font-bold'>
+                                {leader[0][1]}
+                            </div>
+                        </div>
+                        <div className='flex flex-col justify-center items-center outline outline-1 outline-gray-300 rounded-xl w-1/5 bg-white h-[200px]'>
+                            <div className='m-2'>
+                                <img src={tback} className='h-[60px]'/>
+                            </div>
+                            <div className='text-gray-500'>
+                                {leader[0][2]}
+                            </div>
+                            <div className='rounded-full bg-[#f0f7f7] text-[15px] text-[#64d8d8] px-6 py-1 m-3 font-bold'>
+                                {leader[0][1]}
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div className='w-fit pt-6'>
-                    {leader.map((stud)=>{
-                        return <Student name={stud[2]} position={stud[0]} score={stud[1]}/>
-                    })}
+                    <div className=' mx-20 mt-8 text-gray-600'>
+                        <div className='px-8 shadow-md outline outline-1 outline-gray-300 flex justify-around items-center bg-white m-2 rounded-md h-[40px]'>
+                            <div>{leader[3][0]}</div>
+                            <div>{leader[3][2]}</div>
+                            <div>Points: {leader[3][1]}</div>
+                        </div>
+                        <div className='shadow-md px-8 outline outline-1 outline-gray-300 flex justify-around items-center bg-white m-2 rounded-md h-[40px]'>
+                            <div>{leader[3][0]}</div>
+                            <div>{leader[3][2]}</div>
+                            <div>Points: {leader[3][1]}</div>
+                        </div>
+                        <div className='shadow-md px-8 outline outline-1 outline-gray-300 flex justify-around items-center bg-white m-2 rounded-md h-[40px]'>
+                            <div>{leader[3][0]}</div>
+                            <div>{leader[3][2]}</div>
+                            <div>Points: {leader[3][1]}</div>
+                        </div>
+                        <div className='shadow-md px-8 outline outline-1 outline-gray-300 flex justify-around items-center bg-white m-2 rounded-md h-[40px]'>
+                            <div>{leader[3][0]}</div>
+                            <div>{leader[3][2]}</div>
+                            <div>Points: {leader[3][1]}</div>
+                        </div>
                     </div>
                 </div>
-            
+            </div>
         </div>
+        
+        
+    </div>
+
 }
 
 export default Leader;
