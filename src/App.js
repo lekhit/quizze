@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import Login_page from './pages/Login_page'
 import Quiz from "./pages/Quiz";
 import Leader from "./pages/Leader";
+import Nickname from "./pages/Nickname";
 
 function App(){
   return <div>
@@ -14,6 +15,9 @@ function App(){
       </Route>
       <Route path='/admin'>
         <Leader/>
+      </Route>
+      <Route path='/nickname'>
+        <Nickname/>
       </Route>
     </Switch>
   </div>
